@@ -833,7 +833,7 @@ bool vehicle::is_structural_part_removed() const
     return false;
 }
 
-bool in_deep_water;
+bool is_in_deep;
 
 /**
  * Returns whether or not the vehicle part with the given id can be mounted in

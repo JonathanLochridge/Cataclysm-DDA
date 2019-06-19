@@ -1261,7 +1261,7 @@ vehicle *vehicle::act_on_map()
 
     const bool pl_ctrl = player_in_control( g->u );
     // TODO: Remove this hack, have vehicle sink a z-level
-    if( is_floating && !can_float() ) {
+    if( is_in_deep && !can_float() ) {
         add_msg( m_bad, _( "Your %s sank." ), name );
         if( pl_ctrl ) {
             unboard_all();
