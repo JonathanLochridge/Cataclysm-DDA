@@ -1443,6 +1443,8 @@ void vehicle::check_falling_or_floating()
     }
     // floating if 2/3rds of the vehicle is in water
     is_floating = 3 * water_tiles >= 2 * pts.size();
+     // in deep water if 2/3rds of the vehicle is in deep water
+    is_in_deep = 3 * deep_water_tiles >= 2 * pts.size();
 }
 
 float map::vehicle_wheel_traction( const vehicle &veh ) const
